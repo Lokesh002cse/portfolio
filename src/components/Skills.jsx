@@ -35,7 +35,7 @@ export const Skills = () => {
                                 responsive={responsive} 
                                 infinite={true} 
                                 autoPlay={true} 
-                                autoPlaySpeed={5000} // 5 seconds
+                                autoPlaySpeed={4000} // 5 seconds
                                 showArrows={true} // Enable arrows for navigation
                                 className="owl-carousel owl-theme skill-slider"
                             >
