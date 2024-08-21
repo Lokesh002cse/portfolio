@@ -136,9 +136,17 @@ nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link.active {
   opacity: 1;
 }
-nav.navbar .navbar-nav .dropdown-toggle.navbar-link {
-  background-color: transparent;
-  color: whitesmoke !important; /* Ensures the dropdown toggle matches other nav items */
+.navbar-nav .nav-link.dropdown-toggle {
+  color: whitesmoke !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400px;
+  letter-spacing: 0.8px;
+  padding: 10px 20px;
+  font-size: 18px;
+  opacity: 0.75;
+  margin-top: 1px;
+  display: inline-block; /* Add this to make the text an inline block */
+  height: 100%;
 }
 
 
@@ -313,7 +321,6 @@ nav.navbar .dropdown-item:focus {
   font-weight: 700;
   text-align: center;
   margin-left: auto;
-
 }
 
 .project p {
@@ -409,6 +416,16 @@ nav.navbar .dropdown-item:focus {
   margin: 10px 0 5px 0;
   font-size: 24px;
   font-weight: bold;
+}
+
+/* Center icons and titles */
+.project .project-content a {
+  display: flex;
+  align-items: center;
+}
+
+.project .project-content a div {
+  margin: 0 auto; /* Center title horizontally */
 }
 
 

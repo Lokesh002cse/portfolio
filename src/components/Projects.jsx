@@ -22,7 +22,7 @@ export const Projects = () => {
     {
       title: "CALCULATOR",
       icon: <HiCalculator size="7em" />,
-      link:"https://lokesh002cse.github.io/calc/",
+      link: "https://lokesh002cse.github.io/calc/",
     },
     {
       title: "PORTFOLIO",
@@ -30,6 +30,7 @@ export const Projects = () => {
       link: "https://lokesh002cse.github.io/portfolioapp/",
     },
   ];
+
 
   // Split the projects into chunks of 2
   const projectChunks = [];
@@ -69,17 +70,17 @@ export const Projects = () => {
                     <Tab.Pane eventKey={`tab${index + 1}`} key={index}>
                       <Row>
                         {chunk.map((project, projectIndex) => (
-                          <Col key={projectIndex} md={6}>
+                          <Col key={projectIndex} md={6} className="justify-content-center">
                             <a
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ textDecoration: 'none', color: 'inherit' }}
+                              className="d-flex flex-column align-items-center" // Stack icon and title vertically
                             >
                               {project.icon}
-                              <div>
+                              <div className="project-title">
                                 <h3>{project.title}</h3>
-                                
                               </div>
                             </a>
                           </Col>

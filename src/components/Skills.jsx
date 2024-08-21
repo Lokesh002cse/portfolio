@@ -40,23 +40,23 @@ export const Skills = () => {
                                 className="owl-carousel owl-theme skill-slider"
                             >
                                 <div className="item">
-                                    <FaReact size="7em" />
+                                    <FaReact size="5em" />
                                     <h5>ReactJS</h5>
                                 </div>
                                 <div className="item">
-                                    <FaPython size="7em" />
+                                    <FaPython size="5em" />
                                     <h5>Python</h5>
                                 </div>
                                 <div className="item">
-                                    <SiCplusplus size="7em" />
+                                    <SiCplusplus size="5em" />
                                     <h5>C++</h5>
                                 </div>
                                 <div className="item">
-                                    <BiLogoPostgresql size="7em" />
+                                    <BiLogoPostgresql size="5em" />
                                     <h5>Postgre SQL</h5>
                                 </div>
                                 <div className="item">
-                                    <BiLogoFlutter size="7em" />
+                                    <BiLogoFlutter size="5em" />
                                     <h5>Flutter</h5>
                                 </div>
                             </Carousel>
