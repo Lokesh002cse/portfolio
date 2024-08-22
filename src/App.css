@@ -178,7 +178,6 @@ nav.navbar .dropdown-item:focus {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
- 
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -220,6 +219,9 @@ nav.navbar .dropdown-item:focus {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .banner button svg {
@@ -231,6 +233,22 @@ nav.navbar .dropdown-item:focus {
 
 .banner button:hover svg {
   margin-left: 25px;
+}
+
+.banner .social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.banner .social-icons a {
+  color: #fff;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner .social-icons a:hover {
+  transform: scale(1.1);
 }
 
 .banner img {
@@ -252,6 +270,7 @@ nav.navbar .dropdown-item:focus {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;

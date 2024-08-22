@@ -6,11 +6,16 @@ import { Banner } from './components/Banner';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { Helmet } from 'react-helmet';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Helmet>
+            <title> Lokesh </title>
+        </Helmet>
         {/* NavBar is always present */}
         <NavBar />
 

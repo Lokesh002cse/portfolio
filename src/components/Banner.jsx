@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa'; // Import the icons
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -8,6 +9,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
+  const [showSocials, setShowSocials] = useState(false); // State to manage the visibility of social icons
   const toRotate = ["Frontend Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
@@ -44,6 +46,10 @@ export const Banner = () => {
     }
   };
 
+  const handleToggle = () => {
+    setShowSocials(!showSocials);
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -52,8 +58,23 @@ export const Banner = () => {
             <div>
               <span className="tagline">Welcome to my Portfolio</span>
               <h1>{`Hi! I'm Lokesh`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Frontend Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+              <p>A passionate and results-driven developer with a knack for creating intuitive, efficient, and scalable web applications. With a strong foundation in both frontend and backend technologies, I thrive on turning complex challenges into elegant solutions. My portfolio showcases the breadth and depth of my experience, from dynamic single-page applications to robust backend systems. I’m excited to share my journey, my work, and the skills that have shaped my career. Let’s build something amazing together!</p>
+              <button onClick={handleToggle} style={{ display: 'flex', alignItems: 'center' }}>
+                Let’s Connect <ArrowRightCircle size={25} />
+              </button>
+              {showSocials && (
+                <div style={{ marginTop: '10px', display: 'flex', gap: '15px' }}>
+                  <a href="https://www.linkedin.com/in/lokeshkmr2511/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={30} />
+                  </a>
+                  <a href="https://www.instagram.com/_itzzlokesh_007/" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram size={30} />
+                  </a>
+                  <a href="mailto:lokeshkmr995@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <FaEnvelope size={30} />
+                  </a>
+                </div>
+              )}
             </div>
           </Col>
         </Row>

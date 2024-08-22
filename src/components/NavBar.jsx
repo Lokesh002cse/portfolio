@@ -1,12 +1,12 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import resume from './assets/'
+
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-
+  
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -41,6 +41,7 @@ export const NavBar = () => {
             >
               <NavDropdown.Item href="#about-1">Me</NavDropdown.Item>
               <NavDropdown.Item href="#about-2">Resume</NavDropdown.Item>
+             
             </NavDropdown>
             <Nav.Link
               as={Link}
