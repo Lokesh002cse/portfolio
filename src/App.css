@@ -137,6 +137,18 @@ nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link.active {
   opacity: 1;
 }
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    margin-right: 10px; /* Decrease space between nav-links on mobile */
+    padding: 0 15px; /* Adjust padding for better spacing */
+    font-size: 16px; /* Slightly smaller font for better fit */
+  }
+  
+  nav.navbar .navbar-nav .nav-link.navbar-link:last-child {
+    margin-right: 0;
+  }
+}
 
 /************ Banner CSS ************/
 .banner {
