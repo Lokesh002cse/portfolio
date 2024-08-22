@@ -36,7 +36,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 
   /* Background image that is covered by the pseudo-element */
-  background-image: url('./assets/img/bg4.jpg'); /* First image (background) */
+  background-image: url('./assets/img/back1.jpg'); /* First image (background) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,52 +125,16 @@ nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link.active {
   font-family:  Georgia, 'Times New Roman', Times, serif;
   font-weight: 400;
-  color: white;
+  color: whitesmoke;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
+  margin-right: 15px;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link.active {
-  opacity: 1;
-}
-.navbar-nav .nav-link.dropdown-toggle {
-  color: whitesmoke !important;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 400px;
-  letter-spacing: 0.8px;
-  padding: 10px 20px;
-  font-size: 18px;
-  opacity: 0.75;
-  margin-top: 1px;
-  display: inline-block; /* Add this to make the text an inline block */
-  height: 100%;
-}
-
-
-nav.navbar .dropdown-menu {
-  background-color: #121212; /* Makes the dropdown background transparent */
-  border: none;
-  padding: 0;
-}
-
-nav.navbar .dropdown-item {
-  font-family:  Georgia, 'Times New Roman', Times, serif;
-  color: white; /* Ensures text color matches the other nav links */
-  font-weight: 400;
-  letter-spacing: 0.8px;
-  padding: 10px 20px;
-  font-size: 18px;
-  opacity: 0.75;
-  background-color: transparent; /* Adds background to dropdown items */
-}
-
-nav.navbar .dropdown-item:hover,
-nav.navbar .dropdown-item:focus {
-  color: whitesmoke !important;
-  background-color: rgba(255, 255, 255, 0.1); /* Adds a hover effect similar to other nav items */
   opacity: 1;
 }
 

@@ -32,17 +32,18 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navbar-nav">
-            <NavDropdown
-              title="ABOUT"
-              id="about-dropdown"
-              className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
-              style={{ fontWeight: 'bold' }}
-              onClick={() => onUpdateActiveLink('about')}
+          <Nav.Link
+           as="a"
+           href="https://drive.google.com/file/d/1Hnblyk3PMLCs0ajn6tqhabie0Hp0eerT/view" // Google Drive link
+           className={activeLink === 'resume' ? 'active navbar-link' : 'navbar-link'}
+           style={{ fontWeight: 'bold' }}
+           onClick={() => onUpdateActiveLink('resume')}
+           target="_blank" // Open link in a new tab
+           rel="noopener noreferrer" // Security best practice when using target="_blank"
             >
-              <NavDropdown.Item href="#about-1">Me</NavDropdown.Item>
-              <NavDropdown.Item href="#about-2">Resume</NavDropdown.Item>
-             
-            </NavDropdown>
+             RESUME
+            </Nav.Link>
+
             <Nav.Link
               as={Link}
               to="/skills"
