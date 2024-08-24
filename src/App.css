@@ -158,6 +158,12 @@ nav.navbar .navbar-nav .nav-link.navbar-link.active {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.banner .profile-image {
+  width: 150px; /* Set the width of the profile image */
+  height: 150px; /* Set the height of the profile image */
+  border-radius: 50%; /* Make the image rounded */
+  margin-bottom: 40px; /* Space between the image and tagline */
+}
 
 .banner .tagline {
   font-weight: 700;
@@ -261,6 +267,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link.active {
 }
 
 .skill h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 45px;
   font-weight: 700;
 }

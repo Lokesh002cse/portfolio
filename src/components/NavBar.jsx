@@ -57,7 +57,7 @@ export const NavBar = () => {
               as={Link}
               to="/projects"
               className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
-              style={{ fontWeight: 'bold' }}
+              style={{ fontWeight: 'bold'}}
               onClick={() => onUpdateActiveLink('projects')}
             >
               PROJECTS
