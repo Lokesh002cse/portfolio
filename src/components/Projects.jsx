@@ -1,6 +1,7 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { HiCalculator } from "react-icons/hi";
-import { SiImdb, SiAboutdotme, SiAnilist } from "react-icons/si";
+import React from 'react';
+import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { SiAboutdotme, SiAnilist, SiImdb } from 'react-icons/si';
+import { HiCalculator } from 'react-icons/hi';
 
 export const Projects = () => {
   const projects = [
@@ -25,18 +26,11 @@ export const Projects = () => {
       link: "https://lokesh002cse.github.io/calc/",
     },
     {
-      title: "PORTFOLIO",
+      title: "PORTFOLIO APP",
       icon: <SiAboutdotme size="7em" />,
       link: "https://lokesh002cse.github.io/portfolioapp/",
     },
   ];
-
-
-  // Split the projects into chunks of 2
-  const projectChunks = [];
-  for (let i = 0; i < projects.length; i += 2) {
-    projectChunks.push(projects.slice(i, i + 2));
-  }
 
   return (
     <section className="project" id="projects">
@@ -48,40 +42,35 @@ export const Projects = () => {
               <p>
                 A showcase of my recent work, highlighting my expertise in web development and software design. Each project demonstrates my ability to solve real-world problems through innovative solutions, utilizing modern technologies and best practices. Explore detailed case studies, code snippets, and live demos to see how I approach challenges, design user-centric interfaces, and implement robust backend systems.
               </p>
-              <Tab.Container id="projects-tabs" defaultActiveKey="tab1">
+              <Tab.Container id="projects-tabs" defaultActiveKey="tab0">
                 <Nav
                   variant="pills"
                   className="nav-pills mb-5 justify-content-center align-items-center"
                   id="pills-tab"
                 >
-                  {projectChunks.map((_, index) => (
+                  {projects.map((project, index) => (
                     <Nav.Item key={index}>
-                      <Nav.Link eventKey={`tab${index + 1}`}>
-                        Tab {index + 1}
-                      </Nav.Link>
+                      <Nav.Link eventKey={`tab${index}`}>{project.title}</Nav.Link>
                     </Nav.Item>
                   ))}
                 </Nav>
                 <Tab.Content>
-                  {projectChunks.map((chunk, index) => (
-                    <Tab.Pane eventKey={`tab${index + 1}`} key={index}>
-                      <Row>
-                        {chunk.map((project, projectIndex) => (
-                          <Col key={projectIndex} md={6} className="justify-content-center">
-                            <a
-                              href={project.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ textDecoration: 'none', color: 'inherit' }}
-                              className="d-flex flex-column align-items-center" // Stack icon and title vertically
-                            >
-                              {project.icon}
-                              <div className="project-title">
-                                <h3>{project.title}</h3>
-                              </div>
-                            </a>
-                          </Col>
-                        ))}
+                  {projects.map((project, index) => (
+                    <Tab.Pane eventKey={`tab${index}`} key={index}>
+                      <Row className="justify-content-center">
+                        <Col md={6} className="d-flex flex-column align-items-center">
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                          >
+                            {project.icon}
+                            <div className="project-title">
+                              <h3>{project.title}</h3>
+                            </div>
+                          </a>
+                        </Col>
                       </Row>
                     </Tab.Pane>
                   ))}
