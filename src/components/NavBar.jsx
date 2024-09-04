@@ -34,7 +34,7 @@ export const NavBar = () => {
           <Nav className="navbar-nav">
           <Nav.Link
            as="a"
-           href="https://drive.google.com/file/d/1Hnblyk3PMLCs0ajn6tqhabie0Hp0eerT/view" // Google Drive link
+           href="https://drive.google.com/file/d/13d6ucmNT-AdhyNUGIPhfsklrc5XgNdM9/view" // Google Drive link
            className={activeLink === 'resume' ? 'active navbar-link' : 'navbar-link'}
            style={{ fontWeight: 'bold' }}
            onClick={() => onUpdateActiveLink('resume')}
